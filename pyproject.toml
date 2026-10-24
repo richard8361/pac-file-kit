@@ -1,0 +1,14 @@
+[project]
+name = "pac-file-kit"
+version = "0.1.0"
+description = "Parses PAC files to extract FindProxyForURL and DNS helpers, with Python implementations of dnsDomainIs and shExpMatch."
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
