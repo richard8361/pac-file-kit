@@ -76,3 +76,10 @@ the PAC text that triggers it.
 `shExpMatch` supports only `*` and `?`. It deliberately does not interpret
 `[a-z]` as a character class: the PAC references do not define that, and
 real engines disagree. Brackets are matched literally.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
